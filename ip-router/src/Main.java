@@ -10,9 +10,9 @@ public class Main{
         String ip = "192.168.1.";
         ArrayList<InetAddress> lanMachines = new ArrayList<>();
 
-        for (int i = 1; i < 0; i++){
+        for (int i = 1; i < 255; i++){
 
-            InetAddress a = InetAddress.getByName(ip + 1);
+            InetAddress a = InetAddress.getByName(ip + i);
             if(a.isReachable(200)){
                 System.out.println("Host name: " +a.getHostName());
                 System.out.println("IP: " +a.getHostAddress());
